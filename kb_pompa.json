@@ -1,0 +1,49 @@
+
+{
+  "judul": "Penyebab Gangguan pada Pompa Air Rumah Tangga",
+
+  "batas": "Aturan dibuat berdasarkan sumber resmi Kementerian Pertanian dan Kementerian Pekerjaan Umum Republik Indonesia. Sistem hanya mencakup gangguan aliran hisap, kebocoran selang, saringan tersumbat, suara dan getaran tidak normal, serta masalah sambungan listrik. Hasil pemeriksaan merupakan saran awal, bukan diagnosis teknis yang pasti.",
+
+  "sumber": {
+    "S1": "Buku Saku Brigade Pangan, Kementerian Pertanian Republik Indonesia, https://repository.pertanian.go.id/bitstreams/9f03adf4-585e-4d92-9430-e324e9fb5782/download, diakses 14 November 2026",
+    "S2": "Peraturan Menteri Pekerjaan Umum Nomor 18/PRT/M/2007, Kementerian Pekerjaan Umum Republik Indonesia, https://jdih.pu.go.id/internal/assets/assets/produk/PermenPUPR/2007/06/permen18-2007.pdf, diakses 14 November 2026"
+  },
+
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": ["pompa menyala", "air tidak keluar"],
+      "mode": "dan",
+      "maka": "gangguan aliran hisap",
+      "sumber": "S1"
+    },
+    {
+      "id": "R2",
+      "jika": ["gangguan aliran hisap", "selang hisap bocor"],
+      "mode": "dan",
+      "maka": "periksa kebocoran selang",
+      "sumber": "S1"
+    },
+    {
+      "id": "R3",
+      "jika": ["gangguan aliran hisap", "saringan tersumbat"],
+      "mode": "dan",
+      "maka": "bersihkan saringan pompa",
+      "sumber": "S1"
+    },
+    {
+      "id": "R4",
+      "jika": ["pompa berbunyi berisik", "pompa bergetar tidak normal"],
+      "mode": "dan",
+      "maka": "periksa komponen pompa",
+      "sumber": "S2"
+    },
+    {
+      "id": "R5",
+      "jika": ["pompa tidak menyala", "sambungan listrik bermasalah"],
+      "mode": "dan",
+      "maka": "periksa sambungan listrik",
+      "sumber": "S1"
+    }
+  ]
+}
